@@ -1,0 +1,44 @@
+package Kodlama.io.Devs.dataAccess.concretes;
+
+import java.util.List;
+
+import Kodlama.io.Devs.dataAccess.abstracts.IRepository;
+import Kodlama.io.Devs.entities.Language;
+
+public class InMemoryRepository implements IRepository{
+	
+	
+	private Language language;
+
+	@Override
+	public List<Language> getAll() {
+		return null;
+	}
+
+	@Override
+	public List<Language> getId() {
+		
+		return null;
+	}
+
+	@Override
+	public List<Language> add() {
+		
+		return null;
+	}
+
+	@Override
+	public List<Language> update() {
+		
+		return null;
+	}
+
+	@Override
+	public List<Language> delete() {
+		
+		return null;
+	}
+	
+	
+
+}

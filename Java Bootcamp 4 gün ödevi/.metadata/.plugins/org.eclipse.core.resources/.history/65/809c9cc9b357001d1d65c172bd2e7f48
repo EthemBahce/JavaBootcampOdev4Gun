@@ -1,0 +1,13 @@
+package Kodlama.io.Devs.entities;
+
+public class Language {
+	
+	int id;
+	
+	String name;
+	
+	
+	
+	
+
+}

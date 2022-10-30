@@ -1,0 +1,55 @@
+package Kodlama.io.Devs.business.concretes;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import Kodlama.io.Devs.business.abstracts.IService;
+import Kodlama.io.Devs.entities.Language;
+
+@RestController
+@RequestMapping("/api")
+public class LanguagesController {
+	
+	
+	private IService services;
+	
+	@Autowired
+	public LanguagesController(IService services) {
+		this.services = services;
+	}
+	
+	@GetMapping("/getAll")
+	List<Language> getAll(){
+		return services.getAll();
+	}
+	
+	
+    @GetMapping("/getId/{index}")
+	Language getId(@PathVariable("index") int index) {
+		return services.getId(index);
+	}
+	
+	
+	@PostMapping("/save")
+	List<Language> add(@RequestBody int index, @RequestBody String name){
+		return services.addFunction(index, name);
+	}
+	
+	
+	List<Language> update(int index, String name){
+		return services.updateFunction(index, name);
+	}
+	
+	
+	List<Language> delete(int index){
+		return services.deleteFunction(index);
+	}
+
+}

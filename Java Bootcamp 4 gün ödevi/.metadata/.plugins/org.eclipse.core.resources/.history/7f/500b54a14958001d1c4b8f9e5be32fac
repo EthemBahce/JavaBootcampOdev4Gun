@@ -1,0 +1,67 @@
+package Kodlama.io.Devs.dataAccess.concretes;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import Kodlama.io.Devs.dataAccess.abstracts.IRepository;
+import Kodlama.io.Devs.entities.Language;
+
+
+@Repository
+public class InMemoryRepository implements IRepository{
+	
+	private List<Language> languages;
+	
+	
+	
+
+	public InMemoryRepository(List<Language> languages) {
+		
+		this.languages = languages;
+		
+	}
+
+	@Override
+	public List<Language> getAll() {
+		
+		return languages;
+	}
+	
+	
+	
+
+	@Override
+	public Language getId(int index) {
+		
+		return languages.get(index);
+	}
+	
+	
+	
+
+	@Override
+	public List<Language> add(int index, String name) {
+		
+		languages.add(new Language(index, name));
+		
+		return languages ;
+	}
+
+	@Override
+	public List<Language> update(int index, String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Language> delete(int index, String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+	
+	
+
+}

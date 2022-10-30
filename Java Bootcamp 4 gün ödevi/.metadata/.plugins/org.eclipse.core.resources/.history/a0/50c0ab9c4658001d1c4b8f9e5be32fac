@@ -1,0 +1,14 @@
+package Kodlama.io.Devs.dataAccess.concretes;
+
+import java.util.List;
+
+import Kodlama.io.Devs.dataAccess.abstracts.IRepository;
+import Kodlama.io.Devs.entities.Language;
+
+public class InMemoryRepository implements IRepository{
+	
+	
+	
+	
+
+}

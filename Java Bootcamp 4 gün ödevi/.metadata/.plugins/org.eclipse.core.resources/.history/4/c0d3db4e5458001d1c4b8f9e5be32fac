@@ -1,0 +1,49 @@
+package Kodlama.io.Devs.business.concretes;
+
+import java.util.List;
+
+import Kodlama.io.Devs.business.abstracts.IService;
+import Kodlama.io.Devs.dataAccess.abstracts.IRepository;
+import Kodlama.io.Devs.entities.Language;
+
+public class ServiceManager implements IService{
+	
+	private IRepository iRepository;
+	
+	public ServiceManager() {
+		
+	}
+
+	@Override
+	public List<Language> getAll() {
+		
+		return null;
+	}
+
+	@Override
+	public Language getId(int index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Language> add(int index, String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Language> update(int index, String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Language> delete(int index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+}
